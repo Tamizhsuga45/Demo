@@ -1,0 +1,29 @@
+
+
+import java.util.*;
+import java.util.HashSet;
+
+public class Country {
+    private HashSet<String> H1 = new HashSet<>();
+
+    public HashSet<String> storeCountryNames(String countryName) {
+        H1.add(countryName);
+        return H1;
+    }
+
+    public String retrieveCountry(String countryName) {
+        for (String country : H1) {
+            if (country.equals(countryName)) {
+                return country;
+            }
+        }
+        return null;
+    }
+
+    public static void main(String[] args) {
+        Country handler = new Country();
+        handler.storeCountryNames("India");
+        handler.storeCountryNames("pakistan");
+        System.out.println(handler.retrieveCountry("china"));
+    }
+}
