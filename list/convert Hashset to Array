@@ -1,0 +1,22 @@
+import java.util.HashSet;
+ 
+public class Test {	 
+    public static void main(String[] args) {
+    
+    	HashSet<String> hashSet = new HashSet<String>();
+        
+    	hashSet.add("Rohit");
+    	hashSet.add("Ishan");
+    	hashSet.add("Tilak");
+    	hashSet.add("Sky");
+    	hashSet.add("Hardik");
+    	hashSet.add("Bumrah");
+    	System.out.println("HashSet: " + hashSet);
+    	String[] strArray = new String[hashSet.size()];
+    	hashSet.toArray(strArray);
+        System.out.println("Array created:");
+        for(String str:strArray){
+             System.out.println(str);
+        }
+    }
+}
